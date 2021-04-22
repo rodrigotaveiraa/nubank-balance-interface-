@@ -1,0 +1,304 @@
+/* Global */
+:root {
+    --lilas : #8A05BE
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 93.75%;
+}
+
+
+body {
+    background: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Titles */
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+h3 {
+    /* color: #8A05BE; */
+    font-weight: 400;
+}
+
+/* Links and buttons */
+a {
+    color: #530082;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #8a05be;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: white;
+    background: var(--lilas);
+    padding: 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.button.new {
+    display: inline-block;
+    /* margin-bottom: 0.8rem; */
+    padding-bottom: 0.8rem;
+}
+
+.button.cancel {
+
+}
+
+/* Header */
+header {
+    background: #8A05BE;
+    padding: 2rem 0 10rem;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    /* text-align: center;   */
+}
+
+#logo {
+    color: #fff;
+    font-size: 3.5rem;
+}
+
+/* Balance */
+#balance {
+    margin-top: -6.5rem;
+    /* flex-direction: column; */
+}
+
+#balance h2{
+    color: #fff;
+    margin-top: 0;
+}
+
+/* Card */
+.card {
+    background: #fff;
+    padding: 1.5rem 2.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 1px 3px gray;
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #8A05BE;
+    margin-top: 1rem;
+    /* text-align: end;  */
+}
+
+.card.total {
+    /* background: #A93EC8; */
+    background: #9628c4;
+    /* background: #7A05A7; */
+    color: white;
+    /* border: solid 1px #fff; */
+}
+
+.card.total p {
+    color: white;
+    /* text-align: end; */
+}
+
+.card.total img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Transactions */
+#transactions h2{
+    color: #8A05BE;
+}
+
+/* Table */
+
+#transactions {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#data-table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child {
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child {
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+table th {
+    background: #fff;
+    font-weight: normal;
+    color: #8A05BE;
+    text-align: left;
+    padding: 1rem 2rem;
+}
+
+table tbody tr {
+    opacity: 0.7;
+}
+
+table tbody tr:hover {
+    opacity: 1;
+}
+
+table td {
+    background : #fff;
+    padding: 1rem 2rem;
+}
+
+td.description {
+
+}
+
+td.income {
+    color: #12a454;
+}
+
+td.expense {
+    color: #e92929;
+}
+
+td.date {
+    color: #3078FF;
+}
+
+/* Modal */
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    visibility: hidden;    
+}
+
+/* .modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+} */
+
+.modal {
+    background: #f0f2f5;
+    padding: 2.4rem;
+    max-width: 500px;
+    width: 90%;
+}
+
+/* form */
+#form  {
+    max-width: 500px;    
+}
+
+#form h2  {
+    margin-top: 0;
+    color: var(--lilas);    
+}
+
+input {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    width: 100%;
+}
+
+.input-group {
+    margin-top: 0.8rem;
+}
+
+.input-group small {
+    opacity: 0.4;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+    width: 48%;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0 4rem;
+    color: #8A05BE;
+}
+
+header img  {
+    width: 90px;
+    height: 85px;
+}
+
+/* Responsivo */
+@media(min-width: 800px){
+    html{
+        font-size: 87.5%;
+    }
+    #balance {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
